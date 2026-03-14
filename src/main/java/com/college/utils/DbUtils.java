@@ -18,7 +18,7 @@ public class DbUtils {
             String host = "localhost";
             String username = "root";
             String password = "1234";
-            String schema = "project_2025";
+            String schema = "social_network";
             int port = 3306;
             String url = "jdbc:mysql://"
                     + host + ":" + port + "/"
@@ -32,6 +32,9 @@ public class DbUtils {
         }
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
 
 
 }

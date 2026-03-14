@@ -1,0 +1,88 @@
+### Register
+POST http://localhost:8989/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "1234",
+  "confirmPassword": "1234"
+}
+
+
+### Login
+POST http://localhost:8989/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "1234"
+}
+
+### Get Me
+GET http://localhost:8989/api/users/me?userId=1
+
+### Update Profile Image
+POST http://localhost:8989/api/users/profile-image
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "profileImageUrl": "https://example.com/profile.jpg"
+}
+
+### Search Users
+GET http://localhost:8989/api/users/search?userId=1&query=user
+
+### Follow
+POST http://localhost:8989/api/follows/follow
+Content-Type: application/json
+
+{
+  "followerId": 1,
+  "followedId": 2
+}
+
+### Unfollow
+POST http://localhost:8989/api/follows/unfollow
+Content-Type: application/json
+
+{
+  "followerId": 1,
+  "followedId": 2
+}
+
+### Create Post
+POST http://localhost:8989/api/posts/create
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "content": "Hello this is my first post"
+}
+
+### Get My Posts
+GET http://localhost:8989/api/posts/my?userId=1
+
+### Feed
+GET http://localhost:8989/api/feed?userId=1
+
+### Like Post
+POST http://localhost:8989/api/posts/like
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "postId": 1
+}
+
+### Unlike Post
+POST http://localhost:8989/api/posts/unlike
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "postId": 1
+}
+
+### Delete Post
+DELETE http://localhost:8989/api/posts/2?userId=2
